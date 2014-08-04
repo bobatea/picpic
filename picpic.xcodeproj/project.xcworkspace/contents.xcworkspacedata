@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:daka.xcodeproj">
+      location = "self:picpic.xcodeproj">
    </FileRef>
 </Workspace>
