@@ -16,7 +16,7 @@
 
 @implementation NetWorkApi
 
-static NSString * const BaseURLString = @"http://picpic-api.herokuapp.com/"; // To be filled with url from Djiango
+static NSString * const BaseURLString = @"http://picpic-api.herokuapp.com/api/v1/"; // To be filled with url from Djiango
 static NSNumber* uid;
 
 // get self user id
@@ -30,7 +30,7 @@ static NSNumber* uid;
                          password:(NSString *)password
                        completion:(void (^)(BOOL success, NSString* desc))completionBlock
 {
-    NSString *apiName = @"login";
+    NSString *apiName = @"signin";
     NSDictionary *params = @ {@"username" :user_name, @"password" :password};
         //@"password" :[DataHelper md5:password] };
     
