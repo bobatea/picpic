@@ -32,7 +32,6 @@ static NSNumber* uid;
 {
     NSString *apiName = @"signin";
     NSDictionary *params = @ {@"username" :user_name, @"password" :password};
-        //@"password" :[DataHelper md5:password] };
     
     [self networkDealer:apiName
                  params:params
@@ -42,6 +41,25 @@ static NSNumber* uid;
 //          Recusively clousure into next block, until the "manager" in "networkDearler", So there needs to be a "success" returned back
 //                  uid = [NSNumber numberWithInt: [[response objectForKey:@"uid"] intValue]];
                     completionBlock([[response objectForKey:@"success"] boolValue] , [response objectForKey:@"desc"]);
+             }];
+}
+
+
+//sign up
++ (void)signUpAccountWithUserName:(NSString *)userName
+                         password:(NSString *)password
+                           gender:(bool)gender
+                       completion:(void (^)(BOOL success, NSString* desc))completionBlock{
+    
+    NSString *apiName = @"signup";
+    NSDictionary *params = @ {@"username" :userName,
+                              @"password" :password,
+                              @"gender":[NSNumber numberWithBool:gender]};
+    
+    [self networkDealer:apiName
+                 params:params
+             completion:^(NSDictionary *response) {
+                 completionBlock([[response objectForKey:@"success"] boolValue], [response objectForKey:@"desc"]);
              }];
 }
 

@@ -14,6 +14,11 @@
                          password:(NSString *)password
                        completion:(void (^)(BOOL success, NSString* desc))completionBlock;
 
++ (void)signUpAccountWithUserName:(NSString *)userName
+                         password:(NSString *)password
+                           gender:(bool)gender
+                       completion:(void (^)(BOOL success, NSString* desc))completionBlock;
+
 + (void)getNotification:(int) userId
              completion:(void (^)(NSMutableArray* notificationList))completionBlock;
 

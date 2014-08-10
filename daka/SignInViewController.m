@@ -43,11 +43,14 @@
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     
+    
 }
+
 
 -(void)dismissKeyboard {
     [self.view endEditing:YES];
 } //make the view end editing!
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -55,16 +58,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(void) getNotification
 {
@@ -75,6 +68,7 @@
     
     [self performSelector:@selector(getNotification) withObject:self afterDelay:15.0f];
 }
+
 
 - (IBAction)SignIn:(id)sender {
 
@@ -107,6 +101,7 @@
     // [alert release];
 
 }
+
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 

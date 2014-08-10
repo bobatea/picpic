@@ -23,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkj-J2-qgJ">
-                                <rect key="frame" x="104" y="312" width="112" height="82"/>
+                                <rect key="frame" x="104" y="334" width="112" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,26 +32,26 @@
                                     <action selector="SignIn:" destination="zch-Eb-QY2" eventType="touchUpInside" id="HL0-EW-65j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-F8-UP4">
-                                <rect key="frame" x="113" y="465" width="95" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="SGP-Ua-9VC" kind="modal" modalTransitionStyle="coverVertical" id="f9N-MC-FGJ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pass Word" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-T5-Ckd">
                                 <rect key="frame" x="59" y="254" width="203" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="running_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="uy3-AS-Y5s">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rainbowP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uy3-AS-Y5s">
                                 <rect key="frame" x="115" y="71" width="91" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgx-mn-J9s">
+                                <rect key="frame" x="133" y="424" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SGP-Ua-9VC" kind="modal" id="b69-Qc-gbo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -120,8 +120,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lifting_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBR-gg-x4c">
-                                <rect key="frame" x="115" y="71" width="91" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rainbowP.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rBR-gg-x4c">
+                                <rect key="frame" x="115" y="71" width="91" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWz-l6-Nrt">
@@ -158,6 +158,9 @@
                                 <state key="normal" title="Sign Up Now">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="SGP-Ua-9VC" eventType="touchUpInside" id="XcB-PD-gT7"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8F3-I1-epd">
                                 <rect key="frame" x="136" y="360" width="117" height="29"/>
@@ -178,6 +181,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="r8L-Li-eHg"/>
+                    <connections>
+                        <outlet property="gender" destination="8F3-I1-epd" id="iim-zw-xoe"/>
+                        <outlet property="password1" destination="H5a-FG-TcT" id="f0w-3r-Caq"/>
+                        <outlet property="password2" destination="rCv-i6-d64" id="NuO-bU-iUl"/>
+                        <outlet property="userName" destination="iWz-l6-Nrt" id="8Y8-L7-yfi"/>
+                        <segue destination="ygy-St-yjM" kind="modal" identifier="signUpSuccess" id="4gg-3t-my5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PN6-zu-vsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,12 +195,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lifting_img.png" width="212" height="238"/>
-        <image name="running_img.png" width="212" height="208"/>
+        <image name="rainbowP.jpg" width="512" height="512"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="4gg-3t-my5"/>
+    </inferredMetricsTieBreakers>
 </document>
