@@ -49,7 +49,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SGP-Ua-9VC" kind="modal" id="b69-Qc-gbo"/>
+                                    <segue destination="SGP-Ua-9VC" kind="modal" modalTransitionStyle="partialCurl" id="b69-Qc-gbo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,8 +78,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPJ-K5-AhV">
-                                <rect key="frame" x="127" y="145" width="66" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random Picture Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPJ-K5-AhV">
+                                <rect key="frame" x="76" y="130" width="168" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -102,11 +102,12 @@
                     </view>
                     <connections>
                         <outlet property="desc" destination="cg9-gA-MCA" id="dy1-V4-TEv"/>
+                        <segue destination="36b-0e-a15" kind="custom" identifier="swipToRandomPicPage" customClass="UserMainPageSegue" id="7kN-f5-CZ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-cP-XKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232" y="341"/>
+            <point key="canvasLocation" x="-202" y="710"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="k6J-5R-yXh">
@@ -149,7 +150,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zch-Eb-QY2" kind="modal" modalTransitionStyle="coverVertical" id="jcz-rc-JDJ"/>
+                                    <action selector="backToSignIn:" destination="SGP-Ua-9VC" eventType="touchUpInside" id="73q-Hf-zhc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-dP-oYx">
@@ -193,6 +194,36 @@
             </objects>
             <point key="canvasLocation" x="-761" y="1057"/>
         </scene>
+        <!--Random Pic Page View Controller-->
+        <scene sceneID="IG0-pZ-nQ0">
+            <objects>
+                <viewController id="36b-0e-a15" customClass="RandomPicPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i4g-7h-v8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aao-jY-mZU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlo-si-rDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake Pic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWt-YG-TRl">
+                                <rect key="frame" x="122" y="273" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="ygy-St-yjM" kind="custom" identifier="swipToUserMainPage" customClass="RandomPicPageSegue" id="pTY-Wo-H2m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmo-df-GYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="710"/>
+        </scene>
     </scenes>
     <resources>
         <image name="rainbowP.jpg" width="512" height="512"/>
@@ -203,6 +234,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4gg-3t-my5"/>
+        <segue reference="pTY-Wo-H2m"/>
     </inferredMetricsTieBreakers>
 </document>

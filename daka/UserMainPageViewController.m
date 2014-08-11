@@ -7,6 +7,8 @@
 //
 
 #import "UserMainPageViewController.h"
+#import "RandomPicPageViewController.h"
+#import "RKSwipeBetweenViewControllers.h"
 
 @interface UserMainPageViewController ()
 
@@ -26,12 +28,43 @@
     return self;
 }
 
+
+-(void)viewDidAppear:(BOOL)animated{
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.desc.text = self.recipeDesc;
+    
+//    UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandle:)];
+//    leftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+//    [leftRecognizer setNumberOfTouchesRequired:1];
+//    [self.view addGestureRecognizer:leftRecognizer];
+    
+    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+
+    RKSwipeBetweenViewControllers *navigationController = [[RKSwipeBetweenViewControllers alloc]initWithRootViewController:pageController];
+    
+    UIViewController *UserMainPage = [[UIViewController alloc]init];
+    RandomPicPageViewController *RandomPicPage = [[RandomPicPageViewController alloc]init];
+    
+    [navigationController.viewControllerArray addObjectsFromArray:@[UserMainPage, RandomPicPage,]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
 }
+
+
+//- (void)leftSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
+//{
+//    //Do moving
+//    [self performSegueWithIdentifier:@"swipToRandomPicPage" sender:self];
+//}
+
 
 - (void)didReceiveMemoryWarning
 {

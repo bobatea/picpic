@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserMainPageViewController : UIViewController
+@interface UserMainPageViewController : UIViewController <UIApplicationDelegate>
 
+@property (strong, nonatomic) UIWindow *window;
 
 @property (weak, nonatomic) IBOutlet UILabel *desc;
 @property (nonatomic, strong) NSString *recipeDesc;

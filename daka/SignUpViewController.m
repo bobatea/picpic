@@ -77,6 +77,9 @@
     }
 }
 
+- (IBAction)backToSignIn:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 -(void)dismissKeyboard {
     [self.view endEditing:YES];
