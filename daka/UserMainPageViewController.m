@@ -8,7 +8,9 @@
 
 #import "UserMainPageViewController.h"
 #import "RandomPicPageViewController.h"
+
 #import "RKSwipeBetweenViewControllers.h"
+#import "NTSlidingViewController.h"
 
 @interface UserMainPageViewController ()
 
@@ -39,31 +41,47 @@
     // Do any additional setup after loading the view.
     self.desc.text = self.recipeDesc;
     
-//    UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandle:)];
-//    leftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [leftRecognizer setNumberOfTouchesRequired:1];
-//    [self.view addGestureRecognizer:leftRecognizer];
+#warning: TODO: Improve the swipe screen dynamic effects with below code and library
     
-    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandle:)];
+    leftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [leftRecognizer setNumberOfTouchesRequired:1];
+    [self.view addGestureRecognizer:leftRecognizer];
+    
+//    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+//
+//    RKSwipeBetweenViewControllers *navigationController = [[RKSwipeBetweenViewControllers alloc]initWithRootViewController:pageController];
+//    
+//    UIViewController *UserMainPage = [[UIViewController alloc]init];
+//    RandomPicPageViewController *RandomPicPage = [[RandomPicPageViewController alloc]init];
+//    
+//    [navigationController.viewControllerArray addObjectsFromArray:@[UserMainPage, RandomPicPage,]];
+//    
+//    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+//    self.window.rootViewController = navigationController;
+//    [self.window makeKeyAndVisible];
+    
 
-    RKSwipeBetweenViewControllers *navigationController = [[RKSwipeBetweenViewControllers alloc]initWithRootViewController:pageController];
+//    // Override point for customization after application launch.
+//    UIViewController *userMainPage = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"userMainPage"];
+//    UIViewController *randomPicPage = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"randomPicPage"];
+//    
+//    NTSlidingViewController *sliding = [[NTSlidingViewController alloc] initSlidingViewControllerWithTitle:@"OwnPics" viewController:userMainPage];
+//    [sliding addControllerWithTitle:@"PicPic" viewController:randomPicPage];
+//    
+//    sliding.selectedLabelColor = [UIColor redColor];
+//    sliding.unselectedLabelColor = [UIColor brownColor];
+//
+//    self.window.rootViewController = sliding;
     
-    UIViewController *UserMainPage = [[UIViewController alloc]init];
-    RandomPicPageViewController *RandomPicPage = [[RandomPicPageViewController alloc]init];
-    
-    [navigationController.viewControllerArray addObjectsFromArray:@[UserMainPage, RandomPicPage,]];
-    
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
 }
 
 
-//- (void)leftSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
-//{
-//    //Do moving
-//    [self performSegueWithIdentifier:@"swipToRandomPicPage" sender:self];
-//}
+- (void)leftSwipeHandle:(UISwipeGestureRecognizer*)gestureRecognizer
+{
+    //Do moving
+    [self performSegueWithIdentifier:@"swipToRandomPicPage" sender:self];
+}
 
 
 - (void)didReceiveMemoryWarning

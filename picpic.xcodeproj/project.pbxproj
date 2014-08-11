@@ -47,6 +47,9 @@
 		662F0DF9197B225C003C4632 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662F0DE1197B225B003C4632 /* UIKit.framework */; };
 		662F0E01197B225C003C4632 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 662F0DFF197B225C003C4632 /* InfoPlist.strings */; };
 		662F0E03197B225C003C4632 /* dakaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662F0E02197B225C003C4632 /* dakaTests.m */; };
+		667536DC199863410080A7AB /* NTSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667536DB199863410080A7AB /* NTSlidingViewController.m */; };
+		667536E0199888910080A7AB /* UserMainPageSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 667536DF199888910080A7AB /* UserMainPageSegue.m */; };
+		667536E319988A760080A7AB /* RandomPicPageSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 667536E219988A760080A7AB /* RandomPicPageSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,12 @@
 		662F0E02197B225C003C4632 /* dakaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dakaTests.m; sourceTree = "<group>"; };
 		6650B97E198EFA2100B11AA8 /* UserMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMainPageViewController.h; sourceTree = "<group>"; };
 		6650B97F198EFA2100B11AA8 /* UserMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMainPageViewController.m; sourceTree = "<group>"; };
+		667536DA199863410080A7AB /* NTSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSlidingViewController.h; sourceTree = "<group>"; };
+		667536DB199863410080A7AB /* NTSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSlidingViewController.m; sourceTree = "<group>"; };
+		667536DE199888910080A7AB /* UserMainPageSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMainPageSegue.h; sourceTree = "<group>"; };
+		667536DF199888910080A7AB /* UserMainPageSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMainPageSegue.m; sourceTree = "<group>"; };
+		667536E119988A760080A7AB /* RandomPicPageSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPicPageSegue.h; sourceTree = "<group>"; };
+		667536E219988A760080A7AB /* RandomPicPageSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPicPageSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +188,7 @@
 		661EF9E0198575C20090CF93 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				667536DD1998883E0080A7AB /* CustomSegueClass */,
 				05F280611998578300B89431 /* RandomPicPage */,
 				6650B97D198EF9F800B11AA8 /* UserMainPage */,
 				661EF9E1198575D10090CF93 /* SignIn_SignUp */,
@@ -208,6 +218,7 @@
 		661EF9F01985AC000090CF93 /* ThirdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				667536D91998630B0080A7AB /* CustomSegue2 */,
 				05F2805D199856FE00B89431 /* CustomSegue */,
 				661EFA141985C4F80090CF93 /* UIKit+AFNetworking */,
 				661EF9F71985C44C0090CF93 /* AFNetworking */,
@@ -398,6 +409,26 @@
 			name = UserMainPage;
 			sourceTree = "<group>";
 		};
+		667536D91998630B0080A7AB /* CustomSegue2 */ = {
+			isa = PBXGroup;
+			children = (
+				667536DA199863410080A7AB /* NTSlidingViewController.h */,
+				667536DB199863410080A7AB /* NTSlidingViewController.m */,
+			);
+			name = CustomSegue2;
+			sourceTree = "<group>";
+		};
+		667536DD1998883E0080A7AB /* CustomSegueClass */ = {
+			isa = PBXGroup;
+			children = (
+				667536E119988A760080A7AB /* RandomPicPageSegue.h */,
+				667536E219988A760080A7AB /* RandomPicPageSegue.m */,
+				667536DE199888910080A7AB /* UserMainPageSegue.h */,
+				667536DF199888910080A7AB /* UserMainPageSegue.m */,
+			);
+			name = CustomSegueClass;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,6 +532,7 @@
 				661EFA0B1985C44C0090CF93 /* AFHTTPRequestOperation.m in Sources */,
 				661EFA291985C4F80090CF93 /* UIButton+AFNetworking.m in Sources */,
 				661EFA0E1985C44C0090CF93 /* AFNetworkReachabilityManager.m in Sources */,
+				667536E319988A760080A7AB /* RandomPicPageSegue.m in Sources */,
 				661EFA2B1985C4F80090CF93 /* UIProgressView+AFNetworking.m in Sources */,
 				661EFA131985C44C0090CF93 /* AFURLSessionManager.m in Sources */,
 				661EFA111985C44C0090CF93 /* AFURLRequestSerialization.m in Sources */,
@@ -508,6 +540,7 @@
 				662F0DEE197B225B003C4632 /* BTAppDelegate.m in Sources */,
 				661EFA2C1985C4F80090CF93 /* UIRefreshControl+AFNetworking.m in Sources */,
 				661EFA121985C44C0090CF93 /* AFURLResponseSerialization.m in Sources */,
+				667536E0199888910080A7AB /* UserMainPageSegue.m in Sources */,
 				661EF9E71985779E0090CF93 /* SignInViewController.m in Sources */,
 				661EFA2A1985C4F80090CF93 /* UIImageView+AFNetworking.m in Sources */,
 				661EF9EA198586220090CF93 /* SignUpViewController.m in Sources */,
@@ -523,6 +556,7 @@
 				661EFA0D1985C44C0090CF93 /* AFHTTPSessionManager.m in Sources */,
 				05F28064199857AC00B89431 /* RandomPicPageViewController.m in Sources */,
 				661EFA271985C4F80090CF93 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				667536DC199863410080A7AB /* NTSlidingViewController.m in Sources */,
 				661EFA261985C4F80090CF93 /* AFNetworkActivityIndicatorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

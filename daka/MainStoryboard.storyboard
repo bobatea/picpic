@@ -59,7 +59,7 @@
                     <connections>
                         <outlet property="password" destination="XHJ-T5-Ckd" id="Jto-3z-cjg"/>
                         <outlet property="username" destination="QSk-l6-Mwv" id="jHO-NF-adG"/>
-                        <segue destination="ygy-St-yjM" kind="modal" identifier="SignInSuccess" id="6QJ-wg-Bis"/>
+                        <segue destination="ygy-St-yjM" kind="modal" identifier="SignInSuccess" customClass="UserMainPageSegue" id="6QJ-wg-Bis"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPd-VY-8wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -69,7 +69,7 @@
         <!--User Main Page View Controller-->
         <scene sceneID="XX9-rU-Ohs">
             <objects>
-                <viewController id="ygy-St-yjM" customClass="UserMainPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userMainPage" id="ygy-St-yjM" customClass="UserMainPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XoT-6r-PFw"/>
                         <viewControllerLayoutGuide type="bottom" id="3ZH-3E-7sz"/>
@@ -102,12 +102,12 @@
                     </view>
                     <connections>
                         <outlet property="desc" destination="cg9-gA-MCA" id="dy1-V4-TEv"/>
-                        <segue destination="36b-0e-a15" kind="custom" identifier="swipToRandomPicPage" customClass="UserMainPageSegue" id="7kN-f5-CZ5"/>
+                        <segue destination="36b-0e-a15" kind="custom" identifier="swipToRandomPicPage" customClass="UserMainPageSegue" id="86f-Cm-TJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-cP-XKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-202" y="710"/>
+            <point key="canvasLocation" x="-204" y="710"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="k6J-5R-yXh">
@@ -197,7 +197,7 @@
         <!--Random Pic Page View Controller-->
         <scene sceneID="IG0-pZ-nQ0">
             <objects>
-                <viewController id="36b-0e-a15" customClass="RandomPicPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="randomPicPage" id="36b-0e-a15" customClass="RandomPicPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i4g-7h-v8P"/>
                         <viewControllerLayoutGuide type="bottom" id="Aao-jY-mZU"/>
@@ -217,7 +217,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="ygy-St-yjM" kind="custom" identifier="swipToUserMainPage" customClass="RandomPicPageSegue" id="pTY-Wo-H2m"/>
+                        <segue destination="ygy-St-yjM" kind="custom" identifier="swipToUserMainPage" customClass="RandomPicPageSegue" id="6Nx-JB-iiz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmo-df-GYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,6 +234,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pTY-Wo-H2m"/>
+        <segue reference="6Nx-JB-iiz"/>
     </inferredMetricsTieBreakers>
 </document>

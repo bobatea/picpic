@@ -7,7 +7,7 @@
 //
 
 #import "BTAppDelegate.h"
-
+#import "NTSlidingViewController.h"
 
 @implementation BTAppDelegate
 
@@ -17,6 +17,20 @@
 //    // Override point for customization after application launch.
 //    self.window.backgroundColor = [UIColor whiteColor];
 //    [self.window makeKeyAndVisible];
+    
+    
+//    // Override point for customization after application launch.
+//    UIViewController *userMainPage = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"userMainPage"];
+//    UIViewController *randomPicPage = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"randomPicPage"];
+//    
+//    NTSlidingViewController *sliding = [[NTSlidingViewController alloc] initSlidingViewControllerWithTitle:@"UserPage" viewController:userMainPage];
+//    [sliding addControllerWithTitle:@"PicPic" viewController:randomPicPage];
+//    
+//    sliding.selectedLabelColor = [UIColor redColor];
+//    sliding.unselectedLabelColor = [UIColor brownColor];
+//    
+//    //self.window.rootViewController = sliding;
+    
     return YES;
 }
 
